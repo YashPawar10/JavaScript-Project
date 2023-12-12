@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World count</title>
+    <style>
+        body{
+            padding: 50px 100px;
+            background-color: rgb(247, 247, 213);
+
+        }
+        h1{
+            text-align: center;
+            background-color: rgb(255, 0, 140);
+            color: white;
+            padding: 10px;
+            margin: 5px 0px;
+            margin-top: 40px;
+  
+        }
+        textarea{
+            width: 99.5%;
+            height: 400px;
+            border: 1px solid gray;
+            font-size: 30px;
+
+        }
+        p{
+            text-align: center;
+             background-color: rgb(255, 0, 140);
+             color: white;
+             padding: 10px;
+            margin: 5px 0px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>World and character count</h1>
+    <textarea name="" id="textbox" cols="30" rows="10"></textarea>
+    <p>
+        <span id="word"> 0 </span>word and
+        <span id="char"> 0 </span>character
+    </p>
+    <script>
+        let texbox=document.getElementById('textbox');
+        texbox.addEventListener('input',function(){
+            var text=this.value;
+            document.getElementById('char').innerHTML=text.length;
+            text=text.trim();
+            let words=text.split(" ");
+            let cnt=0;
+            for(let i=0;i<words.length;i++){
+                if(words[i]!="")cnt++;
+    
+            }
+            document.getElementById("word").innerHTML=cnt;
+            
+        })
+    </script>
+</body>
+</html>  
