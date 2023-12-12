@@ -1,0 +1,47 @@
+body{
+    background-color: pink;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    text-align: center;
+}
+.container{
+    background-color: white;
+    padding: 30px;
+    margin: 20px;
+    cursor: pointer;
+    
+}
+
+.question{
+    font-weight: 600;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+.button{
+    float: right;
+    transition: transform 0.5s;
+}
+.button.active{
+    transform: rotate(180deg);
+}
+.answer{
+    height: 0px;
+    overflow: auto;
+    text-align: justify;
+    transition: height 0.5s;
+    line-height: 25px;
+}
+
+.answer.active{
+
+    height: 50px;
+}
+
+.color-red{
+    color: red;
+}
+
+
